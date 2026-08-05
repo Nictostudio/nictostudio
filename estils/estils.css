@@ -1,0 +1,943 @@
+body {
+
+    font-family:'Amarante', sans-serif;
+
+    font-size:22px;
+
+    color:#240f0f;
+
+    text-shadow:1px 1px 2px rgba(0,0,0,.35);
+
+    margin:0;
+
+    padding:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    background-color:#e1dcce;
+
+/*fons a ratlles*/
+    background-image:
+    linear-gradient(
+        to right,
+        #B36966 0px,
+        #B36966 2px,
+        transparent 2px,
+        transparent 6px,
+        #B36966 6px,
+        #B36966 14px,
+        transparent 14px,
+        transparent 18px,
+        #B36966 18px,
+        #B36966 20px,
+        transparent 20px
+    );
+
+
+    background-size:45px 100%;
+
+}
+
+
+
+main{
+
+    flex:1;
+
+}
+
+
+
+header{
+
+    height:150px;
+
+    background:url("motllura01.png") repeat-x top left;
+
+}
+
+
+
+footer{
+
+    height:86px;
+
+    flex-shrink:0;
+
+    text-align:center;
+
+    color:#270202;
+
+    background:url("footer01.png") repeat-x bottom left;
+
+}
+
+
+
+
+/* ===========================
+   quadre amb icona + PLACA PRINCIPAL
+   =========================== */
+
+
+.ficha-cuadro{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:40px;
+
+    width:min(1100px,95%);
+
+    margin:50px auto;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+.imagen-cuadro{
+
+    flex:1 1 320px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.imagen-cuadro img{
+
+    width:100%;
+
+    max-width:380px;
+
+    height:auto;
+
+    display:block;
+
+
+    transition:.3s;
+
+}
+
+
+
+.imagen-cuadro img:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+
+
+
+/* Placa Museu */
+
+
+.placa-museo{
+
+    position:relative;
+
+    flex:1 1 340px;
+
+    padding: clamp(18px, 3.2vw, 35px) clamp(16px, 2.6vw, 30px);
+    box-sizing:border-box;
+
+    text-align:center;
+
+
+    border:4px solid #6d4a12;
+
+    border-radius:4px;
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #f7e6a2,
+        #d5b15c,
+        #b8862c,
+        #a77420,
+        #d8b35f,
+        #f4e7b3
+    );
+
+
+    box-shadow:
+
+    inset 0 2px 2px rgba(255,255,255,.5),
+
+    inset 0 -3px 5px rgba(0,0,0,.25),
+
+    0 8px 18px rgba(0,0,0,.30);
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.placa-museo,
+.placa-museo *{
+
+    text-shadow:none;
+
+    color:#3b2405;
+
+}
+
+
+
+.placa-museo h2{
+
+    margin:0;
+
+    font-size:clamp(1.4rem,3vw,2rem);
+
+}
+
+
+
+.placa-logo{
+
+    display:block;
+
+    width: 200px;
+
+    max-width:60%;
+
+    height:auto;
+
+    margin:20px auto;
+
+}
+
+
+
+.subtitulo1{
+
+    font-size:2.15rem;
+
+    font-style:italic;
+
+}
+
+
+
+.subtitulo2{
+
+    margin-top:10px;
+
+    font-size:1.2rem;
+
+}
+
+
+
+
+
+/* tornillos */
+
+
+.tornillo{
+
+    position:absolute;
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+
+    background:
+    radial-gradient(circle at 35% 35%,
+    #fff,
+    #fee5c4 35%,
+    #c09965 70%,
+    #3b2405);
+
+
+    box-shadow:
+    inset 1px 1px 2px white,
+    0 1px 2px rgba(0,0,0,.4);
+
+}
+
+
+
+.tl{
+
+    top:12px;
+    left:12px;
+
+}
+
+.tr{
+
+    top:12px;
+    right:12px;
+
+}
+
+.bl{
+
+    bottom:12px;
+    left:12px;
+
+}
+
+.br{
+
+    bottom:12px;
+    right:12px;
+
+}
+
+
+
+
+
+/* Segona pantalla : Galeria/*/
+
+
+.seccion-galeria{
+
+
+    min-height:100vh;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    padding-top:120px;
+
+
+    box-sizing:border-box;
+
+
+}
+
+
+
+
+.titulo-galeria{
+
+
+    position:relative;
+
+
+    width:min(90vw,420px);
+    padding: clamp(14px, 2.8vw, 22px) clamp(22px, 4vw, 44px);
+
+    /* padding:18px 40px; */
+
+
+    text-align:center;
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #f7e6a2,
+        #d1ae55,
+        #aa7821,
+        #e6cc7b
+    );
+
+
+    border:4px solid #6d4a12;
+
+
+    border-radius:3px;
+
+
+
+    box-shadow:
+
+    inset 0 2px 3px rgba(255,255,255,.5),
+
+    inset 0 -3px 5px rgba(0,0,0,.25),
+
+    0 8px 15px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+
+.titulo-galeria h1{
+
+
+    margin:0;
+
+
+    font-size:clamp(1.3rem,4vw,2.2rem);
+
+
+    letter-spacing:.08em;
+
+
+    text-transform:uppercase;
+
+
+    color:#382000;
+
+
+    text-shadow:none;
+
+
+}
+
+
+
+
+
+.tornillo-galeria{
+
+
+    position:absolute;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    width:14px;
+
+
+    height:14px;
+
+
+    border-radius:50%;
+
+
+    background:
+    radial-gradient(circle at 35% 35%,
+    #fff,
+    #fee5c4 35%,
+    #c09965 70%,
+    #3b2405);
+
+
+
+}
+
+
+
+.tornillo-galeria.izq{
+
+    left:12px;
+
+}
+
+
+.tornillo-galeria.der{
+
+    right:12px;
+
+}
+
+
+
+
+
+/* zona de galeria */
+
+
+.image-gallery-container{
+
+
+    width:min(1100px,90%);
+
+
+    margin:30px auto 0;
+
+
+    min-height:400px;
+
+
+}
+
+
+/* LA GALERIAA */
+
+.gallerywrap {
+  /* padding: clamp(14px, 3vw, 28px); */
+    width: min(1100px, 92vw);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  gap: clamp(10px, 2.2vw, 16px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.thumb {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto; /*noforçaalturafixa*/
+  /* min-height: 140px;
+  max-height: 260px; */
+  display: block;
+  object-fit: contain; /*respeta el ratio*/
+  border-radius: 12px;
+  transform: scale(1);
+  transition: transform .15s ease;
+}
+
+
+/* Última fila: si hi ha 2 ítems, que queden a extrems */
+.gallery .thumb:nth-last-child(2) { grid-column: 1; }
+.gallery .thumb:nth-last-child(1) { grid-column: 3; }
+
+.thumb:hover img { transform: scale(1.02); }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 24px);
+  z-index: 9999;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal__content {
+  position: relative;
+  width: min(100%, 980px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__img {
+  width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #111;
+}
+
+/* Botó tancar */
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* Nav carrusel */
+.modal__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+  z-index: 2;
+  user-select: none;
+}
+
+.modal__nav--prev { left: 10px; }
+.modal__nav--next { right: 10px; }
+
+/* A pantallas mitjanes: 2 columnas */
+@media (max-width: 600px){
+  .gallery{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* desactiva el “extremos” porque ya no existe la col 3 */
+  .gallery .thumb:nth-last-child(2) { grid-column: auto; }
+  .gallery .thumb:nth-last-child(1) { grid-column: auto; }
+}
+
+/* A pantallas petites: 1 columna */
+@media (max-width: 200px){
+  .gallery{ grid-template-columns: 1fr; }
+
+  .gallery .thumb:nth-last-child(2) { grid-column: auto; }
+  .gallery .thumb:nth-last-child(1) { grid-column: auto; }
+}
+
+/* NOMES cuando hay 3 columnas:
+   última fila amb 2 ítems => un a esquerra (col 1) i l'altre a dreta (col 3) */
+@media (min-width: 901px){
+  .gallery .thumb:nth-last-child(2) { grid-column: 1; }
+  .gallery .thumb:nth-last-child(1) { grid-column: 3; }
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+    header{
+
+        height:80px;
+
+        background-size:auto 80%;
+
+    }
+
+
+
+    .ficha-cuadro{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .seccion-galeria{
+
+        padding-top:80px;
+        padding-left: clamp(14px, 3vw, 28px);
+        padding-right: clamp(14px, 3vw, 28px);
+
+    }
+
+
+}
+
+/*secció formulari */
+
+.seccion-contacto{
+  padding-bottom: 80px;
+}
+
+.contacto-wrap{
+  width:min(1100px, 92vw);
+  /*margin: 30px auto 0;*/
+    margin: clamp(16px, 3vw, 30px) auto 0;
+}
+
+.contacto-placas{
+  display:grid;
+  gap: clamp(16px, 2.5vw, 26px);
+      grid-template-columns: 0.95fr 1.05fr;
+ /* grid-template-columns: 1fr;  mobile */
+  align-items:start;
+}
+
+@media (min-width: 920px){
+  .contacto-placas{
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+}
+
+.contacto-info,
+.contacto-form{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contacto-info{
+    padding-top: clamp(18px, 4vw, 45px);
+}
+
+.contacto-datos{
+  
+  margin-top: 16px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  text-align:left;
+}
+
+.contacto-dato{
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(109,74,18,.25);
+  border-radius: 12px;
+  padding: 12px 14px;
+  
+}
+
+.contacto-dato__k{
+  font-size: 0.9rem;
+  opacity: .75;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.contacto-dato__v{
+  margin-top: 4px;
+  font-weight: 800;
+  color: #3b2405;
+
+    max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Form */
+.campo{
+  display:grid;
+  gap: 7px;
+  margin-top: 14px;
+  text-align:left;
+  position:relative;
+}
+
+.campo__label{
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  opacity: .95;
+}
+
+.campo__input{
+  width:100%;
+  box-sizing:border-box;
+  border-radius: 12px;
+  border: 2px solid rgba(109,74,18,.35);
+  background: rgba(255,255,255,.55);
+  padding: 12px 14px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 1.6vw, 16.5px);  
+  outline:none;
+
+}
+
+.campo__input:focus{
+  border-color: rgba(109,74,18,.7);
+  box-shadow: 0 0 0 4px rgba(109,74,18,.15);
+}
+
+.campo__textarea{
+  resize: vertical;
+}
+
+/* Botó */
+.contacto-btn{
+  margin-top: 18px;
+  width:100%;
+  border: 0;
+  cursor: pointer;
+
+  border-radius: 14px;
+  padding: 14px 16px;
+
+  font-weight: 900;
+  font-size: clamp(15px, 1.8vw, 18px);
+  padding: clamp(12px, 2vw, 14px) clamp(14px, 2.2vw, 16px);
+  color: #fff;
+  background: linear-gradient(180deg, #2b1a0c 0%, #120906 100%);
+  box-shadow: 0 10px 18px rgba(0,0,0,.22);
+
+  transition: transform .12s ease, filter .12s ease;
+}
+
+.contacto-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.contacto-nota{
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  opacity: .75;
+}
+
+/* força el form a alineació esquerra dins dels camps */
+.contacto-form{
+  text-align:center; /*  el h2 i els altres centrats */
+}
+
+.contacto-form .campo,
+.contacto-form .contacto-nota{
+  text-align:left;
+}
+
+
+.contacto-instagram{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+  padding: 0;
+
+  border-radius: 16px;
+  border: 2px solid rgba(109,74,18,.55);
+
+  background: linear-gradient(145deg,
+    rgba(245,232,170,.95) 0%,
+    rgba(220,186,90,.45) 55%,
+    rgba(160,110,20,.25) 100%);
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.55),   /* llum de dalt */
+    inset 0 -3px 10px rgba(0,0,0,.18),   /* ombra abaix */
+    0 10px 18px rgba(0,0,0,.12);
+
+  transition: transform .14s ease, box-shadow .14s ease, filter .14s ease;
+}
+
+.ig-img{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+  transition: transform .18s ease, filter .18s ease;
+}
+
+/* Hover: efecte  (bisel + brillo) */
+.contacto-instagram::before{
+  content:"";
+  position:absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+  pointer-events:none;
+
+  background: radial-gradient(circle at 30% 25%,
+    rgba(255,255,255,.75),
+    rgba(255,255,255,.25) 28%,
+    rgba(255,255,255,0) 58%);
+
+  opacity: .0;
+  transform: translateY(6px);
+  transition: opacity .14s ease, transform .14s ease;
+}
+
+/* Necesario para ::before */
+.contacto-instagram{
+  position: relative;
+}
+
+.contacto-instagram:hover{
+  transform: translateY(-2px);
+  filter: saturate(1.05) brightness(1.02);
+  box-shadow:
+    inset 0 3px 0 rgba(255,255,255,.65),
+    inset 0 -6px 14px rgba(0,0,0,.22),
+    0 14px 24px rgba(0,0,0,.16);
+}
+
+.contacto-instagram:hover::before{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contacto-instagram:hover .ig-img{
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.18));
+}
+
+/* Responsive en móvil */
+@media (max-width: 520px){
+  .contacto-instagram{
+    width: 78px;
+    height: 78px;
+  }
+  .ig-img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Asegura que el borde no es retalla en pantalles petites */
+.titulo-galeria{
+  box-sizing: border-box;
+}
+
+/* Mobile: que el título use todo el ancho disponible y el borde se vea */
+@media (max-width: 520px){
+  .seccion-galeria{
+    padding-top: 90px; /* baixa el vertical del móvil */
+  }
+
+  .titulo-galeria{
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* redueix els paddings per no perdre el borde */
+    padding: 14px 18px;
+    border-width: 3px;     /* borde més visible la movil */
+    border-radius: 3px;
+  }
+
+  #contacto,
+  .seccion-galeria{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+@media (max-width: 520px){
+  .contacto-datos{
+    flex-direction: column;
+    align-items: stretch; /* stretch a tota la pantalla */
+  }
+
+  .contacto-dato{
+    width: 100%;
+  }
+
+  .contacto-instagram{
+    width: 100%;
+    justify-content: center;
+    margin: 0; /* evita “centros” raros */
+  }
+}

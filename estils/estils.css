@@ -113,6 +113,7 @@ footer{
     display:flex;
 
     justify-content:center;
+    min-width: 0;
 
 }
 
@@ -120,15 +121,15 @@ footer{
 
 .imagen-cuadro img{
 
-    width:100%;
+width: min(100%, 380px);
 
-    max-width:380px;
+    /* max-width:380px; */
 
     height:auto;
 
     display:block;
 
-
+  border-radius: 14px; 
     transition:.3s;
 
 }
@@ -708,6 +709,9 @@ footer{
   border: 1px solid rgba(109,74,18,.25);
   border-radius: 12px;
   padding: 12px 14px;
+      width: 100%;
+    max-width: 360px;
+    text-align: center;
   
 }
 
@@ -719,12 +723,13 @@ footer{
 }
 
 .contacto-dato__v{
-  margin-top: 4px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 800;
   color: #3b2405;
 
-    max-width: 100%;
-  overflow-wrap: anywhere;
+  max-width: 100%;
+    overflow-wrap: anywhere;
   word-break: break-word;
 }
 
@@ -738,7 +743,6 @@ footer{
 }
 
 .campo__label{
-  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   font-size: clamp(14px, 1.4vw, 16px);
   opacity: .95;
 }
@@ -926,9 +930,10 @@ footer{
 }
 
 @media (max-width: 520px){
-  .contacto-datos{
+  .contacto-datos, .contacto-dato{
     flex-direction: column;
-    align-items: stretch; /* stretch a tota la pantalla */
+    align-items: center;
+    text-align: center; /* stretch a tota la pantalla */
   }
 
   .contacto-dato{
@@ -936,8 +941,29 @@ footer{
   }
 
   .contacto-instagram{
-    width: 100%;
+    width: 78px;
+    height: 78px;    
     justify-content: center;
     margin: 0; /* evita “centros” raros */
+  }
+}
+@media (max-width: 520px){
+  .contacto-placas{
+    grid-template-columns: 1fr;
+  }
+}
+/* tornillos de esquina no toquen el text*/
+.placa-museo{
+  padding-left: max(clamp(16px, 2.6vw, 30px), 42px);
+  padding-right: max(clamp(16px, 2.6vw, 30px), 42px);
+  padding-top: max(clamp(18px, 3.2vw, 35px), 42px);
+  padding-bottom: max(clamp(18px, 3.2vw, 35px), 42px);
+}
+@media (max-width: 520px){
+  .placa-museo{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
